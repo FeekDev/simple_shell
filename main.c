@@ -1,10 +1,11 @@
 #include "shell.h"
 
-int main(int argc, char **argv)
+int main()
 {
     char *cmd;
 
     init_shell();
+
 
     do
     {
@@ -12,18 +13,19 @@ int main(int argc, char **argv)
 
         cmd = read_cmd(); /*leemos un comando (linea de entrada terminada en \n)*/
 
-        if(!cmd)
+        if (!cmd)
         {
             exit(EXIT_SUCCESS); /*si hay un error al leer el comando, salimos del shell*/
         }
 
-        if(cmd[0] == '\0' || strcmp(cmd, "\n") == 0)
+        if (cmd[0] == '\0' || strcmp(cmd, "\n") == 0)
         {
+            printf("enter main");
             free(cmd);
             continue; /*si el comando está vacío, salteamos la entrda y continuamos con el bucle*/
         }
 
-        if(strcmp(cmd, "exit\n") == 0) /*si el comando es exit, salimos del shell*/
+        if (strcmp(cmd, "exit\n") == 0) /*si el comando es exit, salimos del shell*/
         {
             free(cmd);
             break;
@@ -33,7 +35,7 @@ int main(int argc, char **argv)
 
         free(cmd);
 
-    } while(1);
+    } while (1);
 
     exit(EXIT_SUCCESS);
 

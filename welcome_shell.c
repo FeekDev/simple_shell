@@ -13,5 +13,4 @@ void init_shell()
     "*************");
     printf("\n");
     sleep(1);
-    clear();
 }
