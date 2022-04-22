@@ -1,16 +1,22 @@
 #include "shell.h"
 
+/**
+ * read_cmd - read the string input
+ *
+ * Return: char*
+ */
+
 char *read_cmd(void)
 {
-    char *string;
-    size_t size = 10;
+	char *string;
+	size_t size = 10;
 
-    char **stringptr;
+	char **stringptr;
 
-    stringptr = &string;
-    string = (char *)malloc(size);
+	stringptr = &string;
+	string = (char *)malloc(size);
 
-    getline(stringptr, &size, stdin);
+	getline(stringptr, &size, stdin);
 
-    return string;
+	return (string);
 }
