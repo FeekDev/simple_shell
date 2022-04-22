@@ -4,6 +4,9 @@
 #define MAXLIST 100 /*max number of commands to be supported*/
 #define clear() printf("\033[H\033[J")
 
+/*Macro delimiter*/
+#define DELIMIT " \"\t\n\a"
+
 /* Libraries */
 #include <stdio.h>
 #include <string.h>
@@ -13,8 +16,10 @@
 #include <stdbool.h>
 
 /*void init_shell();*/
-void print_prompt1(void);
 void init_shell(void);
+void mode_interactive(void);
+void mode_non_interactive(void);
+char **tokenizer(char *str);
 
 char *read_cmd(void);
 
