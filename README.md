@@ -10,7 +10,9 @@ The present project consists of the creation of a program similar to a Linux she
 
 3. The commands that are typed in a chain of commands can have options or arguments that make more specific the processes that the users require.
 
-## Objective: to create an interface similar to the linux shell by writing programs that allow you to print a "prompt" on the screen followed by a command line in which you can type text strings that can be interpreted by the operating system as valid commands and/or arguments that can be executed or return error messages.
+## Objective: 
+
+to create an interface similar to the linux shell by writing programs that allow you to print a "prompt" on the screen followed by a command line in which you can type text strings that can be interpreted by the operating system as valid commands and/or arguments that can be executed or return error messages.
 
 To achieve the goal, some Linux functions are used, as well as system calls that are incorporated into the written programs.
 
