@@ -14,7 +14,7 @@
 
 /*void init_shell();*/
 void print_prompt1(void);
-void init_shell();
+void init_shell(void);
 
 char *read_cmd(void);
 

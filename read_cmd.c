@@ -19,4 +19,5 @@ char *read_cmd(void)
 	getline(stringptr, &size, stdin);
 
 	return (string);
+	free(string);
 }
