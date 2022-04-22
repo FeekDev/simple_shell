@@ -18,10 +18,19 @@ To achieve the goal, some Linux functions are used, as well as system calls that
 
 ## Table of content
 
-## How to install it: 
-Lo primero que se debe hacer es clonar el presente repositorio y así se tendrá un directorio con todos los archivos del programa.
+- [cisfun$ simple_shell\n](#cisfun-simple_shell\n)
+    - [Description: Simple shell](#description-simple-shell)
+    - [Objective:](#objective)
+    - [Table of content](#table-of-content)
+    - [How to install it:](#how-to-install-it)
+    - [How to use it:](#how-to-use-it)
+    - [Example:](#example)
+    - [Authors:](#authors)
 
-Luego se debe compilar el programa mediante las siguiente línea de commandos: gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
+## How to install it:
+The first thing to do is clone this repository and thus you will have a directory with all the program files.
+
+Then the program must be compiled using the following command line: gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 
 ## How to use it: 
 
