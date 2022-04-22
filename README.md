@@ -1,6 +1,6 @@
-## simple_shell
+# simple_shell
 
-# Description: Simple shell
+## Description: Simple shell
 
 The present project consists of the creation of a program similar to a Linux shell, using the C programming language. To do it, it is necessary understand the following definitions:
 
