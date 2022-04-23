@@ -1,17 +1,17 @@
 #include "shell.h"
 
 /**
- * main - the main function
+ * mode_non_interactive - run the script
  *
- * Return: int
  */
 
-void mode_non_interactive()
+void mode_non_interactive(void)
 {
 	char *cmd;
+	int status = -1;
 
 	do {
-		print_prompt1(); /*imprimimos el indicador del shell*/
+		printf("cisfun$ "); /*imprimimos el indicador del shell*/
 
 		cmd = read_cmd(); /*read a command*/
 
@@ -21,13 +21,11 @@ void mode_non_interactive()
 			break;
 		}
 
-		if (cmd[0] == '\0' || strcmp(cmd, "\n") == 0)
+		/*exit status*/
+		if (status >= 0)
 		{
-			free(cmd);
-			continue; /*if escape line, continue prompt*/
+			exit(status);
 		}
 
-	} while (1);
-
-	exit(EXIT_SUCCESS);
+	} while (status == -1);
 }

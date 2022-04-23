@@ -1,5 +1,12 @@
 #include "shell.h"
 
+/**
+ * tokenizer - divide the command
+ *
+ * str: command line
+ * Return: tokens
+ */
+
 char **tokenizer(char *str)
 {
     char **tokens;

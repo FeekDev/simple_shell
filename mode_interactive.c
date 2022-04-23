@@ -1,40 +1,40 @@
 #include "shell.h"
 
 /**
- * main - the main function
+ * mode_interactive - input command line and read
  *
- * Return: int
  */
 
-void mode_interactive()
+void mode_interactive(void)
 {
 	char *cmd;
     char **tokens;
+	int status = -1;
 
 	init_shell();
 
+	/* Loop infinite */
 	do {
 		printf("cisfun$ "); /*imprimimos el indicador del shell*/
 
 		cmd = read_cmd(); /*read a command*/
         tokens = tokenizer(cmd);/*tokenizer command*/
+		/*execute = program_tokens(tokens);*/
 		if (strcmp(cmd, "exit\n") == 0)
 		{
 			free(cmd);
 			break;
 		}
 
-		if (cmd[0] == '\0' || strcmp(cmd, "\n") == 0)
-		{
-			free(cmd);
-			continue; /*if escape line, continue prompt*/
-		}
-
         /*avoid memory leaks*/
         free(cmd);
 
-	} while (1);
+		/*exit status*/
+		if (status >= 0)
+		{
+			exit(status);
+		}
 
-
-	exit(EXIT_SUCCESS);
+	} while (status == -1);
+	/*end loop infinite*/
 }
