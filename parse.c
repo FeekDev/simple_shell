@@ -20,9 +20,18 @@ char **tokenizer(char *str)
     {
         tokens[i] = token;
         i++;
-
+        if (i >= bufersize)
+        {
+            bufersize += bufersize;
+            tokens = realloc(tokens, bufersize * sizeof(char *));
+            if (!tokens)
+            {
+                fprintf(stderr, "Reallocation error in parse: tokens");
+                exit(EXIT_FAILURE);
+            }
+        }
         tokens = strtok(NULL, DELIMIT);
-    
     }
+    tokens[i] = NULL;
     return (tokens);
 }

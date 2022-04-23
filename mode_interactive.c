@@ -17,7 +17,7 @@ void mode_interactive()
 		printf("cisfun$ "); /*imprimimos el indicador del shell*/
 
 		cmd = read_cmd(); /*read a command*/
-        tokens = tokenizer(cmd);
+        tokens = tokenizer(cmd);/*tokenizer command*/
 		if (strcmp(cmd, "exit\n") == 0)
 		{
 			free(cmd);
