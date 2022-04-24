@@ -8,7 +8,7 @@
 void mode_interactive(void)
 {
 	char *cmd;
-    char **tokens;
+        char **tokens;
 	int status = -1;
 
 	init_shell();
