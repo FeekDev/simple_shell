@@ -18,7 +18,7 @@ void mode_interactive(void)
 		printf("cisfun$ "); /*Print the shell indicator*/
 
 		cmd = read_cmd(); /*read a command*/
-        tokens = tokenizer(cmd);/*tokenizer command*/
+                tokens = tokenizer(cmd);/*tokenizer command*/
 		/*execute = program_tokens(tokens);*/
 		if (strcmp(cmd, "exit\n") == 0)
 		{
@@ -26,8 +26,8 @@ void mode_interactive(void)
 			break;
 		}
 
-        /*avoid memory leaks*/
-        free(cmd);
+               /*avoid memory leaks*/
+               free(cmd);
 
 		/*exit status*/
 		if (status >= 0)
