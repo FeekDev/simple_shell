@@ -15,7 +15,7 @@ void mode_interactive(void)
 
 	/* Loop infinite */
 	do {
-		printf("cisfun$ "); /*imprimimos el indicador del shell*/
+		printf("cisfun$ "); /*Print the shell indicator*/
 
 		cmd = read_cmd(); /*read a command*/
         tokens = tokenizer(cmd);/*tokenizer command*/
@@ -36,5 +36,5 @@ void mode_interactive(void)
 		}
 
 	} while (status == -1);
-	/*end loop infinite*/
+	/*end loop*/
 }
