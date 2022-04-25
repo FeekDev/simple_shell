@@ -16,11 +16,11 @@ void mode_interactive(void)
 	do {
 		printf("cisfun$ "); /*imprimimos el indicador del shell*/
 		cmd = read_cmd(); /*read a command*/
-        args = tokenizer(cmd);/*tokenizer command*/
+		args = tokenizer(cmd);/*tokenizer command*/
 		status = execute_tokens(args);
 
-        /*avoid memory leaks*/
-        free(cmd);
+		/*avoid memory leaks*/
+		free(cmd);
 		free(args);
 
 		/*exit status*/

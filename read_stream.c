@@ -46,4 +46,5 @@ char *read_stream(void)
 			}
 		}
 	}
+
 }

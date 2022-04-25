@@ -23,7 +23,8 @@ char *read_cmd(void)
 			free(string);
 			exit(EXIT_SUCCESS);
 		}
-		else{
+		else
+		{
 			free(string);
 			perror("error in read_line: getline");
 			exit(EXIT_FAILURE);
