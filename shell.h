@@ -13,14 +13,20 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <errno.h>
-#include <stdbool.h>
+#include <sys/wait.h>
 
-/*void init_shell();*/
 void init_shell(void);
 void mode_interactive(void);
 void mode_non_interactive(void);
 char **tokenizer(char *str);
 
+int new_process(char **args);
+int numb_builtins(void);
+int execute_tokens(char **args);
+
 char *read_cmd(void);
+
+/* variables */
+char **args;
 
 #endif /* SHELL_H */

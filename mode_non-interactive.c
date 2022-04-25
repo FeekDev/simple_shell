@@ -12,14 +12,13 @@ void mode_non_interactive(void)
 
 	do {
 		printf("cisfun$ "); /*imprimimos el indicador del shell*/
-
 		cmd = read_cmd(); /*read a command*/
+		args = tokenizer(cmd);/*tokenizer command*/
+		/*execute = program_tokens(tokens);*/
 
-		if (strcmp(cmd, "exit\n") == 0)
-		{
-			free(cmd);
-			break;
-		}
+        /*avoid memory leaks*/
+        free(cmd);
+		free(args);
 
 		/*exit status*/
 		if (status >= 0)

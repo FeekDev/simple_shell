@@ -8,7 +8,6 @@
 void mode_interactive(void)
 {
 	char *cmd;
-    char **tokens;
 	int status = -1;
 
 	init_shell();
@@ -16,18 +15,13 @@ void mode_interactive(void)
 	/* Loop infinite */
 	do {
 		printf("cisfun$ "); /*imprimimos el indicador del shell*/
-
 		cmd = read_cmd(); /*read a command*/
-        tokens = tokenizer(cmd);/*tokenizer command*/
-		/*execute = program_tokens(tokens);*/
-		if (strcmp(cmd, "exit\n") == 0)
-		{
-			free(cmd);
-			break;
-		}
+        args = tokenizer(cmd);/*tokenizer command*/
+		status = execute_tokens(args);
 
         /*avoid memory leaks*/
         free(cmd);
+		free(args);
 
 		/*exit status*/
 		if (status >= 0)

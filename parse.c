@@ -7,7 +7,7 @@
  * Return: tokens
  */
 
-char **tokenizer(char *str)
+char **tokenizer(char *cmd)
 {
     char **tokens;
     int bufersize = 100;
@@ -22,7 +22,7 @@ char **tokenizer(char *str)
         exit(EXIT_FAILURE);
     }
 
-    token = strtok(str, DELIMIT);
+    token = strtok(cmd, DELIMIT);
     while (token)
     {
         tokens[i] = token;
@@ -37,7 +37,7 @@ char **tokenizer(char *str)
                 exit(EXIT_FAILURE);
             }
         }
-        tokens = strtok(NULL, DELIMIT);
+        token = strtok(NULL, DELIMIT);
     }
     tokens[i] = NULL;
     return (tokens);

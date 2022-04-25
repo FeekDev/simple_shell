@@ -16,7 +16,18 @@ char *read_cmd(void)
 	stringptr = &string;
 	string = (char *)malloc(size);
 
-	getline(stringptr, &size, stdin);
-
+	if (getline(stringptr, &size, stdin) == -1)
+	{
+		if (feof(stdin))
+		{
+			free(string);
+			exit(EXIT_SUCCESS);
+		}
+		else{
+			free(string);
+			perror("error in read_line: getline");
+			exit(EXIT_FAILURE);
+		}
+	}
 	return (string);
 }
