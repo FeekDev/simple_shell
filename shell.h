@@ -6,6 +6,7 @@
 
 /*Macro delimiter*/
 #define DELIMIT " \"\t\n\a"
+extern char **environ;
 
 /* Libraries */
 #include <stdio.h>
@@ -23,10 +24,12 @@ char **tokenizer(char *str);
 int new_process(char **args);
 int numb_builtins(void);
 int execute_tokens(char **args);
-
+int own_cd(char **args);
+int own_env(char **args);
+int own_help(char **args);
 char *read_cmd(void);
 
-/* variables */
+/* variables global */
 char **args;
 
 #endif /* SHELL_H */
