@@ -27,6 +27,7 @@ int execute_tokens(char **args);
 int own_cd(char **args);
 int own_env(char **args);
 int own_help(char **args);
+int own_exit(char **args);
 char *read_cmd(void);
 
 /* variables global */

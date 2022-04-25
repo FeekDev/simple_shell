@@ -37,7 +37,8 @@ int execute_tokens(char **args)
     int (*builtin_func[])(char **) = {
         &own_cd,
         &own_env,
-        &own_help
+        &own_help,
+        &own_exit
     };
 
     int i = 0;
