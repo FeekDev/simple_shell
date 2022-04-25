@@ -30,5 +30,5 @@ void mode_interactive(void)
 		}
 
 	} while (status == -1);
-	/*end loop infinite*/
+	/*end loop*/
 }
