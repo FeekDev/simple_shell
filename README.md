@@ -44,5 +44,5 @@ With the command exit, the sehll will finish, look:
 
 
 ## Authors:
-  /t Felipe Ríos <felipe.riosgg@gmail.com> t/.
-  /t Raúl Quintero <4638@holbertonschool.com>
+  - Felipe Ríos <felipe.riosgg@gmail.com> t/.
+  - Raúl Quintero <4638@holbertonschool.com>
